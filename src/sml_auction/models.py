@@ -70,6 +70,10 @@ class Auction(TimeStampedModel):
         if not auctions:
             return
 
+        for auc in auctions:
+            auc.winner = auc.current_bet.owner
+            auc.save()
+
         author_ids = [a.owner.id for a in auctions]
 
         for author_id in author_ids:
