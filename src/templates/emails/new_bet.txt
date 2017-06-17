@@ -1,0 +1,1 @@
+New bet for an auction item, item right there {{url}}
